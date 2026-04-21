@@ -1,12 +1,4 @@
-# Enterprise Security (Cloud and IoT)
-
-### Part 2: Cloud Security
-
-##### Lecturer:       **Enda Lee**
-
-##### Contact/ Email: **`enda.lee@tudublin.ie`**
-
-------
+# Cloud Security
 
 #### Lab 1
 ##### &#x1f4c4; [Set up a virtualized Linux server environment](./lab1/lab1.1.md)
