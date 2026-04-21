@@ -1,0 +1,27 @@
+# /traefik/dynamic/webgoat.yml
+http:
+  routers:
+    webgoat:
+      entryPoints:
+        - websecure
+      rule: "PathPrefix(`/WebGoat`)"
+      service: webgoat-svc
+      tls: {}
+
+    webwolf:
+      entryPoints:
+        - websecure
+      rule: "PathPrefix(`/WebWolf`)"
+      service: webwolf-svc
+      tls: {}
+
+  services:
+    webgoat-svc:
+      loadBalancer:
+        servers:
+          - url: "http://webgoat:8080"
+
+    webwolf-svc:
+      loadBalancer:
+        servers:
+          - url: "http://webgoat:9090"
